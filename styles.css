@@ -1,0 +1,118 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+:root { 
+    --white: hsl(0, 0%, 100%);
+    --light: hsl(217, 12%, 63%);
+    --medium: hsl(216, 12%, 54%);
+    --dark: hsl(213, 19%, 18%);
+    --very-dark: hsl(216, 12%, 8%);
+    --highlight: hsl(25, 97%, 53%);
+}
+
+body {
+    background-color: var(--very-dark);
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+    border-radius: 10px;
+    margin: 1.5rem;
+    padding: 1.5rem;
+}
+
+.star {
+    border-radius: 50px;
+    background-color: var(--dark);
+    padding: .6rem;
+}
+
+h1 {
+    color: var(--white);
+}
+
+.main-text, 
+.thanks-text {
+    color: var(--medium);
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+input[type="radio"] {
+    appearance: none;
+    margin: 0;
+    font: inherit;
+}
+.rating {
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    color: var(--light);
+    background-color: var(--medium);
+}
+
+/* .rating:not(:first-of-type) {
+    margin-left: .75rem;
+} */
+
+.submit {
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--highlight);
+    width: 100%;
+    padding: .5rem;
+    letter-spacing: 2px;
+    padding-top: 15px;
+}
+
+/* thank you page */
+
+.your-rating {
+    color: var(--highlight);
+    background-color: (var(--dark), 20);
+    border-radius: 20px;
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
