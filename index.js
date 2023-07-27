@@ -12,7 +12,7 @@ ratings.forEach(rating => {
 })
 
 const submitRating = () => {
-    thanksPage.classList.add('visible');
+    thanksPage.classList.remove('hidden');
     ratingsPage.classList.add('hidden');
 }
 

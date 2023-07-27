@@ -58,12 +58,8 @@ body {
     max-width: 26rem;
 }
 
-.rating-page {
-    visibility: visible;
-}
-
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
 .star {
@@ -147,11 +143,6 @@ h1 {
 /* thank you page */
 .thanks-page {
     align-items: center;
-    visibility: hidden;
-}
-
-.visible {
-    visibility: visible;
 }
 
 .thanks-image {
