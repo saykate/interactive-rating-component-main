@@ -163,6 +163,19 @@ h1 {
     text-align: center;
 }
 
+@media (max-width: 26.5rem) {
+    .rating-label {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
+@media (max-width: 23rem) {
+    .rating-label {
+        width: 2em;
+        height: 2em;
+    }
+}
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
