@@ -30,6 +30,7 @@
     --white: hsl(0, 0%, 100%);
     --light: hsl(217, 12%, 63%);
     --medium: hsl(216, 12%, 54%);
+    --almost-dark: hsl(200, 10%, 20%);
     --dark: hsl(213, 19%, 18%);
     --very-dark: hsl(216, 12%, 8%);
     --highlight: hsl(25, 97%, 53%);
@@ -37,29 +38,44 @@
 
 body {
     background-color: var(--very-dark);
-    font-family: sans-serif;
+    font-family: 'Overpass', sans-serif;
     font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background-color: var(--dark);
     border-radius: 10px;
     margin: 1.5rem;
     padding: 1.5rem;
+    max-width: 26rem;
+}
+
+.rating-page {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .star {
     border-radius: 50px;
-    background-color: var(--dark);
-    padding: .6rem;
+    background-color: var(--almost-dark);
+    padding: 1rem;
+    justify-self: flex-start;
 }
 
 h1 {
     color: var(--white);
+    margin: 1rem 0;
 }
 
 .main-text, 
@@ -67,51 +83,93 @@ h1 {
     color: var(--medium);
 }
 
+/* form */
 .ratings {
     display: flex;
-    justify-content: space-between;
-    margin: 1rem 0;
+    flex-direction: column;
     width: 100%;
 }
 
-input[type="radio"] {
+/* div holding the buttons */
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.rating-buttons input[type="radio"] {
     appearance: none;
     margin: 0;
     font: inherit;
 }
-.rating {
+
+.rating-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     width: 3em;
     height: 3em;
-    color: var(--light);
-    background-color: var(--medium);
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: var(--almost-dark);
+    color: var(--medium);
 }
 
-/* .rating:not(:first-of-type) {
-    margin-left: .75rem;
-} */
+.rating-label:hover {
+    color: var(--white);
+    background-color: var(--medium);
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--highlight);
+}
 
 .submit {
+    width: 100%;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     text-transform: uppercase;
     color: var(--white);
     background-color: var(--highlight);
-    width: 100%;
-    padding: .5rem;
-    letter-spacing: 2px;
-    padding-top: 15px;
+    letter-spacing: .2rem;
+    padding: .8rem .4rem .4rem .4rem;
+}
+
+.submit:hover {
+    background-color: var(--white);
+    color: var(--highlight);
+    cursor: pointer;
 }
 
 /* thank you page */
+.thanks-page {
+    align-items: center;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.thanks-image {
+    margin: 1.5rem;
+}
 
 .your-rating {
     color: var(--highlight);
-    background-color: (var(--dark), 20);
+    background-color: var(--almost-dark);
     border-radius: 20px;
+    padding: .25rem 1rem;
+    padding-top: 10px;
+    margin-bottom: .5rem;
 }
 
-
+.thanks-text {
+    text-align: center;
+}
 
 
 .attribution { font-size: 11px; text-align: center; }
